@@ -13,7 +13,7 @@
 
 `chmod 755 main.py`
 
-3. Modify the `urls` field with the RSS address of your choice
+3. Modify the `urls` field with the RSS address of your choice. You need to have a space between RSS addresses.
 4. Execute:
 
 `./main.py`
