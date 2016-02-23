@@ -5,19 +5,19 @@
 
 ## How to run it:
 
-1. Clone the application:
+1 Clone the application:
 
 `git clone git@github.com:rgeos/rss.git`
 
-2. Make sure that the file called `main.py` has the proper permissions:
+2 Make sure that the file called `main.py` has the proper permissions:
 
 `chmod 755 main.py`
 
-3. Modify the `urls` field with the RSS address of your choice. You need to have a space between RSS addresses.
-4. Execute:
+3 Modify the `urls` field with the RSS address of your choice. You need to have a space between RSS addresses.
+4 Execute:
 
 `./main.py`
 
-5. The output will be pickled in a file called `rss.txt`
+5 The output will be pickled in a file called `rss.txt`
 
 Enjoy
