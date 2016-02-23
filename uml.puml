@@ -1,0 +1,55 @@
+@startuml
+
+
+namespace classRegex.py {
+    class classRegex {
+        -__init__()
+        +setString(newString)
+        +setRegex(newRegex)
+        +getString()
+        +getRegex(string)
+    }
+}
+
+namespace classRSS.py #DDDDDD {
+    class classRSS {
+        -__init__()
+        +setURLs(newURLs)
+        +getURLs()
+        +getFeeds()
+        +getFeedsLen()
+        +getFeed(feedId)
+        +getFeedLen(feedId)
+        +getFeedTitle(feedId)
+        +getFeedLink(feedId)
+        +getFeedSubtitle(feedId)
+        +getFeedDatas(feedId)
+        +getFeedData(feedId, entryId)
+    }
+}
+
+namespace classSave.py {
+    class classSave {
+        -__init__()
+        +setName(, newName)
+        +getName()
+        +getFile(data)
+    }
+}
+
+namespace main.py {
+    class main {
+        +rss
+        +save
+        +urls
+        +data
+    }
+}
+
+
+
+classRSS.py.classRSS <- classRegex.py.classRegex: "Called by"
+main.py.main <- classRSS.py.classRSS: "Called by"
+main.py.main <- classSave.py.classSave: "Called by"
+
+@enduml

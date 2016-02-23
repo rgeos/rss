@@ -1,36 +1,38 @@
 #!/usr/bin/env python
 # _*_coding: utf-8 _*_
 
+import simplejson as js
 
 class classSave(object):
 	"""
-	Saving data to file
+	Saving data in
 	"""
 
 	def __init__(self):
-		self.filename = "rss.txt"   # by default the filename
+		self.filename = "rss.txt"
 
 
 	def setName(self, newName):
 		"""
-		Set the name of the file
-		:param newName: String
-		:return:        String
+
+		:param newName:
+		:return:
 		"""
 		self.filename = newName
 
 	def getName(self):
 		"""
-		Retrieve the name of the file
-		:return:    String
+
+		:return:
 		"""
 		return self.filename
 
 	def getFile(self, data):
 		"""
-		Write the data to file
-		:param data:    String
-		:return:        Object
+
+		:rtype: object
+		:param data:
+		:return:
 		"""
 		with open(self.getName(), "w") as f:
-			f.write(data.encode('utf-8'))
+			js.dump(data, f)

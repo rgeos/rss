@@ -1,47 +1,36 @@
 #!/usr/bin/env python
+# _*_coding: utf-8 _*_
 
-from flask import Flask, request, render_template, redirect, url_for, flash
+import classRSS as feed
+import classSave as sav
 
-from classForms import RssValidation as rv
+rss = feed.classRSS()
+save = sav.classSave()
 
-app = Flask(__name__)
+# string with URLs separated by space
+# urls = "http://tech.uzabase.com/rss"
 
-
-@app.route("/")
-def index():
-	"""
-	Welcoming page
-	:return:    page template
-	"""
-	return render_template("index.html")
-
-@app.route("/service")
-def service():
-	form = rv(csrf_enabled=False)
-
-	if request.method == "POST" and form.validate():
-		flash("It works")
-		return render_template("index.html", form=form)
-
-	return render_template("index.html", form=form)
+urls = "http://tech.uzabase.com/rss " \
+       "http://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml " \
+       "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml " \
+       "http://rss.nytimes.com/services/xml/rss/nyt/Politics.xml " \
+       "http://rss.nytimes.com/services/xml/rss/nyt/Science.xml"
 
 
-@app.route("/about_en")
-def about_en():
-	"""
-	Details about the project - English page
-	:return:    page template
-	"""
-	return render_template("about_en.html")
+# setting up the URLs
+rss.setURLs(urls)
 
+# dictionary of feeds
+# {0:{feed0}, 1:{feed1}}
+# rss.getFeeds()
 
-@app.route("/about_jp")
-def about_jp():
-	"""
-	Details about the project - Japanese page
-	:return:    page template
-	"""
-	return render_template("about_jp.html")
+# the whole data
+data = [rss.getFeedData(i, u) for i in xrange(rss.getFeedsLen()) for u in xrange(rss.getFeedLen(i))]
 
-if __name__ == "__main__":
-	app.run(debug=True, port=9999)
+# print data
+
+# feed index 0, news index 2, summary
+# data = rss.getFeedData(0, 2)[1]
+
+# save the data to file
+save.getFile(data=data)

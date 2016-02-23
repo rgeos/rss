@@ -43,6 +43,12 @@ class classRSS(object):
 
 		return self.feed
 
+	def getFeedsLen(self):
+		"""
+		The length of the dictionary
+		:return: Integer
+		"""
+		return len(self.getFeeds())
 
 	def getFeed(self, feedId):
 		"""
@@ -53,7 +59,7 @@ class classRSS(object):
 		try:
 			return self.getFeeds()[feedId]
 		except Exception:
-			return "The ID %r doesn't exist." % feedId
+			print "The ID %r doesn't exist." % feedId
 
 
 	def getFeedTitle(self, feedId):
@@ -65,7 +71,7 @@ class classRSS(object):
 		try:
 			return self.remove.getRegex(self.getFeed(feedId=feedId).feed.title)
 		except Exception:
-			return "The ID %r doesn't exist." % feedId
+			print "The ID %r doesn't exist." % feedId
 
 
 	def getFeedLink(self, feedId):
@@ -77,7 +83,7 @@ class classRSS(object):
 		try:
 			return self.getFeed(feedId=feedId).feed.link
 		except Exception:
-			return "The ID %r doesn't exist." % feedId
+			print "The ID %r doesn't exist." % feedId
 
 
 	def getFeedSubtitle(self, feedId):
@@ -89,7 +95,7 @@ class classRSS(object):
 		try:
 			return self.remove.getRegex(self.getFeed(feedId=feedId).feed.subtitle)
 		except Exception:
-			return "The ID %r doesn't exist." % feedId
+			print "The ID %r doesn't exist." % feedId
 
 
 	def getFeedLen(self, feedId):
@@ -101,7 +107,7 @@ class classRSS(object):
 		try:
 			return len(self.getFeed(feedId=feedId).entries)
 		except Exception:
-			return "The ID %r doesn't exist." % feedId
+			print "The ID %r doesn't exist." % feedId
 
 	def getFeedDatas(self, feedId):
 		"""
@@ -112,7 +118,7 @@ class classRSS(object):
 		try:
 			return self.getFeed(feedId=feedId).entries
 		except Exception:
-			return "The ID %r doesn't exist." % feedId
+			print "The ID %r doesn't exist." % feedId
 
 	def getFeedData(self, feedId, entryId):
 		"""
@@ -125,9 +131,9 @@ class classRSS(object):
 		try:
 			title   = self.remove.getRegex(self.getFeedDatas(feedId=feedId)[entryId].title)
 			summary = self.remove.getRegex(self.getFeedDatas(feedId=feedId)[entryId].summary)
-			return [title, summary]
+			return [title.encode('utf-8'), summary.encode('utf-8')]
 		except Exception:
-			return "The ID %r, %r doesn't exist." % (feedId, entryId)
+			print "The ID %r, %r doesn't exist." % (feedId, entryId)
 
 
 

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>main</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;main
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="main-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="main-module.html">Module main</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"># _*_coding: utf-8 _*_</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module classRSS=classRSS-module.html,Class classRSS.classRSS=classRSS.classRSS-class.html"><a title="classRSS
+classRSS.classRSS" class="py-name" href="#" onclick="return doclink('link-0', 'classRSS', 'link-0');">classRSS</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">feed</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module classSave=classSave-module.html,Class classSave.classSave=classSave.classSave-class.html"><a title="classSave
+classSave.classSave" class="py-name" href="#" onclick="return doclink('link-1', 'classSave', 'link-1');">classSave</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">sav</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable main.rss=main-module.html#rss"><a title="main.rss" class="py-name" href="#" onclick="return doclink('link-2', 'rss', 'link-2');">rss</a></tt> <tt class="py-op">=</tt> <tt class="py-name">feed</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name"><a title="classRSS
+classRSS.classRSS" class="py-name" href="#" onclick="return doclink('link-3', 'classRSS', 'link-0');">classRSS</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable main.save=main-module.html#save"><a title="main.save" class="py-name" href="#" onclick="return doclink('link-4', 'save', 'link-4');">save</a></tt> <tt class="py-op">=</tt> <tt class="py-name">sav</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="classSave
+classSave.classSave" class="py-name" href="#" onclick="return doclink('link-5', 'classSave', 'link-1');">classSave</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># string with URLs separated by space</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># urls = "http://tech.uzabase.com/rss"</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable main.urls=main-module.html#urls"><a title="main.urls" class="py-name" href="#" onclick="return doclink('link-6', 'urls', 'link-6');">urls</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"http://tech.uzabase.com/rss "</tt> \ </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">       <tt class="py-string">"http://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml "</tt> \ </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">       <tt class="py-string">"http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml "</tt> \ </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">       <tt class="py-string">"http://rss.nytimes.com/services/xml/rss/nyt/Politics.xml "</tt> \ </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">       <tt class="py-string">"http://rss.nytimes.com/services/xml/rss/nyt/Science.xml"</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-comment"># setting up the URLs</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt id="link-7" class="py-name"><a title="main.rss" class="py-name" href="#" onclick="return doclink('link-7', 'rss', 'link-2');">rss</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method classRSS.classRSS.setURLs()=classRSS.classRSS-class.html#setURLs"><a title="classRSS.classRSS.setURLs" class="py-name" href="#" onclick="return doclink('link-8', 'setURLs', 'link-8');">setURLs</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="main.urls" class="py-name" href="#" onclick="return doclink('link-9', 'urls', 'link-6');">urls</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-comment"># dictionary of feeds</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-comment"># {0:{feed0}, 1:{feed1}}</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-comment"># rss.getFeeds()</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-comment"># the whole data</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable main.data=main-module.html#data"><a title="main.data" class="py-name" href="#" onclick="return doclink('link-10', 'data', 'link-10');">data</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-11" class="py-name"><a title="main.rss" class="py-name" href="#" onclick="return doclink('link-11', 'rss', 'link-2');">rss</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method classRSS.classRSS.getFeedData()=classRSS.classRSS-class.html#getFeedData"><a title="classRSS.classRSS.getFeedData" class="py-name" href="#" onclick="return doclink('link-12', 'getFeedData', 'link-12');">getFeedData</a></tt><tt class="py-op">(</tt><tt class="py-name">i</tt><tt class="py-op">,</tt> <tt class="py-name">u</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">xrange</tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="main.rss" class="py-name" href="#" onclick="return doclink('link-13', 'rss', 'link-2');">rss</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method classRSS.classRSS.getFeedsLen()=classRSS.classRSS-class.html#getFeedsLen"><a title="classRSS.classRSS.getFeedsLen" class="py-name" href="#" onclick="return doclink('link-14', 'getFeedsLen', 'link-14');">getFeedsLen</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">u</tt> <tt class="py-keyword">in</tt> <tt class="py-name">xrange</tt><tt class="py-op">(</tt><tt id="link-15" class="py-name"><a title="main.rss" class="py-name" href="#" onclick="return doclink('link-15', 'rss', 'link-2');">rss</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method classRSS.classRSS.getFeedLen()=classRSS.classRSS-class.html#getFeedLen"><a title="classRSS.classRSS.getFeedLen" class="py-name" href="#" onclick="return doclink('link-16', 'getFeedLen', 'link-16');">getFeedLen</a></tt><tt class="py-op">(</tt><tt class="py-name">i</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-comment"># print data</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-comment"># feed index 0, news index 2, summary</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-comment"># data = rss.getFeedData(0, 2)[1]</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-comment"># save the data to file</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt id="link-17" class="py-name"><a title="main.save" class="py-name" href="#" onclick="return doclink('link-17', 'save', 'link-4');">save</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method classSave.classSave.getFile()=classSave.classSave-class.html#getFile"><a title="classSave.classSave.getFile" class="py-name" href="#" onclick="return doclink('link-18', 'getFile', 'link-18');">getFile</a></tt><tt class="py-op">(</tt><tt id="link-19" class="py-name"><a title="main.data" class="py-name" href="#" onclick="return doclink('link-19', 'data', 'link-10');">data</a></tt><tt class="py-op">=</tt><tt id="link-20" class="py-name"><a title="main.data" class="py-name" href="#" onclick="return doclink('link-20', 'data', 'link-10');">data</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Feb 23 23:15:22 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
