@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PyRSS</title>
+
+        <!-- for-mobile-apps -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Python RSS Reader, PyRSS, Android Compatible, Smartphone Compatible" />
+
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- //for-mobile-apps -->
+
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <div class="main">
+            <h1>PyRSS - a simple RSS reader in Python</h1>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="error-message">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+        <div class="footer">
+            <p><a href="#"><img src="{{ url_for('static', filename='images/uk.png') }}" height="65"></a>
+               <a href="#"><img src="{{ url_for('static', filename='images/jp.png') }}" height="65"></a>
+            </p>
+            <br>
+            <br>
+            <p>&copy 2016 All rights reserved | Design by
+                <a href="http://w3layouts.com" target="_blank">W3layouts.</a></p>
+        </div>
+
+    </body>
+</html>
